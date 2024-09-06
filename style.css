@@ -1,3 +1,33 @@
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.pt-sans-bold {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.pt-sans-regular-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.pt-sans-bold-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+  
 html {
     background-color: #ffffff;
 }
@@ -35,8 +65,9 @@ label {
 }
     
 input {
-    width: 100%;
+    width: auto;
     padding: 10px;
+    margin: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
@@ -55,8 +86,63 @@ button:hover {
     background-color: #0069d9;
 }
 
-.nerko-one-regular {
+select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.login {
+    background-color: cadetblue;
+    border: none;
+}
+
+#nue112system {
+    background-color: #04AA6D;
+    border: none;
+}
+
+#cri {
+    background-color: cyan;
     font-family: "Nerko One", cursive;
-    font-weight: 400;
-    font-style: normal;
-}  
+}
+
+#vvf {
+    background-color: cyan;
+    font-family: "Nerko One", cursive;
+}
+
+#gdf {
+    background-color: cyan;
+    font-family: "Nerko One", cursive;
+}
+
+#pol {
+    background-color: cyan;
+    font-family: "Nerko One", cursive;
+}
+
+#maxiem {
+    background-color: cyan;
+    font-family: "Nerko One", cursive;
+}
+
+#naz {
+    background-color: red;
+    font-family: "Nerko One", cursive;
+}
+
+#page {
+    font-family: "Nerko One", cursive;
+}
+
+.send {
+    background-color: aqua;
+}
+
+.calls {
+    background-color: aqua;
+}
+
+.button_p {
+    background-color: aqua;
+}

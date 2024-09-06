@@ -1,14 +1,88 @@
+<page id="page"></page>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Sistema Principale | NUE 112 - Centralino FVG</title>
-        <link rel="shortcut icon" href="../img/Logo_OnlyFrenck.jpg">
-        <link rel="stylesheet" href="../style.css">
-        <script type="text/javascript" src="C../script.js"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../img/nue112.png" />
+        <link rel="stylesheet" href="../style.css" />
+        <script type="text/javascript" src="../script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
-    <body>
-        <div>Se è il tuo primo accesso e desideri cambiare la tua password, clicca <a href="../Sections/change-password.html">qui</a></div>
+    <body onload="populate();">
+        <h3>Se è il tuo primo accesso e desideri cambiare la tua password, clicca <a href="../NUE-Qualify/login/ForgotPassword/change-password.html">qui</a></h3>
+        <form>
+            <p>Operatore n°</p>
+            <input type="text" placeholder="Precompiled: 650" required>
+        </form>
+        
+        <form action="/url" method "GET" id="soccorso">
+            <p>Nome dell'utente</p>
+            <input type="text" placeholder="Mario" required>
+            <input type="text" placeholder="Rossi" required>
+        </form>
+
+        <form id="contatti_utente">
+            <p>Contatti dell'utente</p>
+            <input type="text" placeholder="Numero da cui l'utente contatta il NUE112" required>
+            <input type="email" placeholder="E-Mail a cui inviare il resoconto della chiamata" required>
+        </form>
+
+        <form id="indirizzo">
+            <p>Posizione dell'utente (o dove ha bisogno)</p>
+            <input type="text" placeholder="Via - Piazza - Viale - Piazzale - Riva" required>
+        </form>
+
+        <form>
+            <p for="position">Locazione precisa dell'utente</p>
+            <select name="position" id="pst">
+                <option type="checkbox" value="select">-- Seleziona se necessario --</option>
+                <option type="checkbox" value="home">In casa</option>
+                <option type="checkbox" value="street">Per strada</option>
+            </select>
+        </form>
+
+        <form>
+            <p for="position" class="invio_corpiem">Situazione approssimativa</p>
+            <select name="send_corp" id="snd_crp">
+                <option value="select">-- Seleziona --</option>
+                <option  value="118">MALORE / ANNEGAMENTO</option>
+                <option  value="115">INC. STRADALE</option>
+                <option  value="117">INCENDIO</option>
+                <option value="113">VIOLENZA</option>
+                <option value="maxiem">ALTRO</option>
+            </select>
+            <input type="text" placeholder="Spiega Altro">
+        </form>
+
+        <form id="spiegazione">
+            <p>Fai spiegare all'utente cosa sta succedendo, poi allerta l'autorità competente</p>
+            <input type="text" placeholder="--" required>
+        </form>
+
+        <h1>Servizi di Emergenza - Corpi disponibili</h1>
+        <div id="services"></div>
+        <button id="cri" type="cri" onclick="alert('Emergenza Sanitaria')">Allerta l'Emergenza Sanitaria</button>
+        <button id="vvf" type="vvf" onclick="alert('Vigili del Fuoco')">Allerta i Vigili del Fuoco</button>
+        <button id="gdf" type="gdf" onclick="alert('Guardia di Finanza')">Allerta la Guardia di Finanza</button>
+        <button id="pol" type="pol" onclick="alert('Forze del ordine')">Allerta le Forze dell'ordine</button>
+        <button id="maxiem" type="maxiem" onclick="alert('Maxi Emergenza')">Allerta la Maxi Emergenza</button>
+        <button id="naz" type="naz" onclick="alert('Servizi Nazionali')">Allerta i Servizi Nazionali</button>
+
+        <form action="" id="unita">
+        <fieldset>   
+        <legend>Mezzi disponibili</legend><br>
+        <div id="emergencyvehicles"></div>
+        </fieldset>    
+        </form>
+
+        <h1><button class="send" type="send" onclick="mobility()">Invia</button></h1>
+        <div id="send"></div>
+        <h1><button class="calls" type="calls"><a href="./page/storicochiamate.html">Storico Chiamate</a></button></h1>
+        
+        <h1>Mentre allerti l'autorità competente passa la scheda allo schermo del collega.</h1>
     </body>
 </html>
